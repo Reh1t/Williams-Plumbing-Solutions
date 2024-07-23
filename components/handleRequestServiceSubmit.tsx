@@ -46,7 +46,7 @@ export const handleRequestServiceSubmit = (event : any) => {
   // Write data to this reference
   set(userRef, data)
     .then(() => {
-      alert("Form submitted successfully!");
+      // alert("Form submitted successfully!");
       console.log("Form submitted successfully");
     })
     .catch((error) => {

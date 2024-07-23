@@ -89,7 +89,7 @@ const CONTACTForm: NextPage<CONTACTFormType> = ({ className = "" }) => {
       <img
         className="w-[428px] relative max-h-full object-contain max-w-full lg:flex-1"
         alt=""
-        src="/williamslogo.png"
+        src="/WilliamsLogo.png"
       />
     </div>
   );
