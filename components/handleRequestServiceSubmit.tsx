@@ -22,10 +22,15 @@ export const handleRequestServiceSubmit = (event : any) => {
   // Add your form handling logic here
   event.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const phone = "+1" + document.getElementById("phone").value;
-  const email = document.getElementById("email").value;
-  const service = document.getElementById("service").value;
+  const nameInput = document.getElementById("name") as HTMLInputElement;
+  const phoneInput = document.getElementById("phone") as HTMLInputElement;;
+  const emailInput = document.getElementById("email")  as HTMLInputElement;;
+  const serviceInput = document.getElementById("service")  as HTMLInputElement;;
+
+  const name = nameInput.value;
+  const phone = "+1" + phoneInput.value;
+  const email = emailInput.value;
+  const service = serviceInput.value;
 
   const data = {
     name,
