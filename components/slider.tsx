@@ -27,7 +27,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
 
   return (
     <div className="relative w-full h-full mx-auto self-stretch max-w-full overflow-hidden max-h-full object-cover">
-      <div className="overflow-hidden relative w-full h-[420px] mq450:h-40 rounded-lg shadow-lg">
+      <div className="overflow-hidden relative w-full h-[420px] mq450:h-40 mq825:h-72 rounded-lg shadow-lg">
         {images.map((image, index) => (
           <img
             key={index}

@@ -127,7 +127,7 @@ const Header1: NextPage<Header1Type> = ({
         </button>
       </div>
       <div className="self-stretch bg-steelblue flex flex-col items-start justify-center py-2.5 px-[61px] box-border max-w-full text-29xl font-ledger mq1400:pl-[30px] mq1400:pr-[30px] mq1400:box-border">
-        <div className="w-[1280px] flex flex-row items-center justify-start max-w-full gap-[20px] mq450:gap-0 mq450::flex-wrap">
+        <div className="w-[1280px] flex flex-row items-center justify-between max-w-full gap-[20px] mq450:gap-0 mq450::flex-wrap">
           <div className="w-[543px] ml-10  flex flex-row items-center justify-start gap-[86px] max-w-full mq450:ml-0 mq825:gap-[43px] mq450:gap-[21px]">
             <img
               className="h-32 w-36 mq675:h-14 mq675:w-16 relative object-cover"
