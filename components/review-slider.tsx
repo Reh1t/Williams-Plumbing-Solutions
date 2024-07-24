@@ -43,13 +43,13 @@ const ImageSlider: React.FC = () => {
       </div>
       <button
         onClick={goToPrevious}
-        className="absolute cursor-pointer top-1/2 left-0 transform -translate-y-1/2 bg-transparent text-black px-4 py-2 "
+        className="absolute cursor-pointer top-1/2 left-0 transform -translate-y-1/2 bg-transparent mq450:bg-black mq450:bg-opacity-50 mq450:text-white text-black px-4 mq450:px-8 py-2 "
       >
         &#10094;
       </button>
       <button
         onClick={goToNext}
-        className="absolute cursor-pointer top-1/2 right-0 transform -translate-y-1/2 bg-transparent text-black px-4 py-2 "
+        className="absolute cursor-pointer top-1/2 right-0 transform -translate-y-1/2 bg-transparent mq450:bg-black mq450:bg-opacity-50 mq450:text-white text-black px-4 mq450:px-8 py-2 "
       >
         &#10095;
       </button>

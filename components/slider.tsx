@@ -27,7 +27,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
 
   return (
     <div className="relative w-full h-full mx-auto self-stretch max-w-full overflow-hidden max-h-full object-cover">
-      <div className="overflow-hidden relative w-full h-[420px] rounded-lg shadow-lg">
+      <div className="overflow-hidden relative w-full h-[420px] mq450:h-40 rounded-lg shadow-lg">
         {images.map((image, index) => (
           <img
             key={index}
@@ -41,13 +41,13 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
       </div>
       <button
         onClick={goToPrevious}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-r-md"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 bg-opacity-20 text-white px-4 py-2 rounded-r-md"
       >
         &#10094;
       </button>
       <button
         onClick={goToNext}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l-md"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 bg-opacity-20 text-white px-4 py-2 rounded-l-md"
       >
         &#10095;
       </button>
