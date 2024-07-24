@@ -70,7 +70,7 @@ const Header1: NextPage<Header1Type> = ({
             className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
             onClick={onHomeClick}
           >
-            <a className="relative leading-[26px] text-[inherit] inline-block min-w-[45px]">
+            <a className="relative leading-[26px] text-[inherit] inline-block ">
               Home
             </a>
           </div>
@@ -78,11 +78,11 @@ const Header1: NextPage<Header1Type> = ({
             className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
             onClick={onTAGHdLinkNormalContainerClick}
           >
-            <a className="relative leading-[26px] text-[inherit] inline-block min-w-[45px]">
+            <a className="relative leading-[26px] text-[inherit] inline-block ">
               About
             </a>
           </div>
-          <div className="flex-1 flex flex-row items-center justify-center py-[7px] px-[15px] box-border font-bold text-black min-w-[62px]">
+          <div className="flex-1 flex flex-row items-center justify-center py-[7px] px-[15px] box-border font-bold text-black ">
             <a
               className=" relative leading-[26px] text-[inherit] inline-block min-w-[65px] cursor-pointer"
               onClick={onServicesTextClick}
@@ -90,9 +90,9 @@ const Header1: NextPage<Header1Type> = ({
               Services
             </a>
           </div>
-          <div className="flex-1 flex flex-row items-center justify-center py-[7px] px-[15px] box-border font-bold text-black min-w-[59px]">
+          <div className="flex-1 flex flex-row items-center justify-center py-[7px] px-[15px] box-border font-bold text-black ">
             <a
-              className="[text-decoration:none] relative leading-[26px] text-[inherit] inline-block min-w-[61px] cursor-pointer"
+              className="[text-decoration:none] relative leading-[26px] text-[inherit] inline-block  cursor-pointer"
               onClick={onProjectsTextClick}
             >
               Projects
@@ -103,7 +103,12 @@ const Header1: NextPage<Header1Type> = ({
               className="[text-decoration:none] relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
               onClick={onMoreTextClick}
             >
-              More
+              Water Treatment
+            </a>
+          </div>
+          <div className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black">
+            <a className="[text-decoration:none] relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer">
+              Blog
             </a>
           </div>
         </nav>
@@ -118,18 +123,18 @@ const Header1: NextPage<Header1Type> = ({
       </div>
       <div className="self-stretch bg-steelblue flex flex-col items-start justify-center py-2.5 px-[61px] box-border max-w-full text-29xl font-ledger mq1400:pl-[30px] mq1400:pr-[30px] mq1400:box-border">
         <div className="w-[1280px] flex flex-row items-center justify-between max-w-full gap-[20px] mq825:flex-wrap">
-          <div className="w-[543px] flex flex-row items-center justify-start gap-[86px] max-w-full mq825:flex-wrap mq825:gap-[43px] mq450:gap-[21px]">
+          <div className="w-[543px] ml-10 flex flex-row items-center justify-start gap-[86px] max-w-full mq825:flex-wrap mq825:gap-[43px] mq450:gap-[21px]">
             <img
-              className="h-[88px] w-24 relative rounded-69xl object-cover"
+              className="h-32 w-36 relative object-cover"
               loading="lazy"
               alt=""
               src="/tag-hd-logo@2x.png"
             />
-            <h1 className="m-0 flex-1 relative text-inherit tracking-[-0.1em] leading-[53px] font-normal font-inherit inline-block min-w-[213px] max-w-full mq825:text-19xl mq825:leading-[42px] mq450:text-10xl mq450:leading-[32px]">
+            <h1 className="m-0 flex-1 relative text-[100px] tracking-[-0.1em] leading-[53px] font-normal font-ledger inline-block min-w-[213px] max-w-full mq825:text-19xl mq825:leading-[42px] mq450:text-10xl mq450:leading-[32px]">
               WILLIAMS
             </h1>
           </div>
-          <div className="w-[169px] flex flex-col items-start justify-start text-13xl">
+          <div className="w-[169px] mr-10 flex flex-col items-start justify-start text-32xl">
             <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit mq825:text-7xl mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
               Plumbing
             </h1>

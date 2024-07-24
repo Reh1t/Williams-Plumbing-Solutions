@@ -141,7 +141,7 @@ const Footer1: NextPage<Footer1Type> = ({
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-start justify-start gap-[24px]">
+      <div className="flex flex-col items-start justify-start gap-[14px]">
         <div
           className="relative leading-[150%] font-medium inline-block min-w-[71px] cursor-pointer"
           onClick={onAboutUsTextClick}

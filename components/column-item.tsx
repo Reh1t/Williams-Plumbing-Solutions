@@ -22,7 +22,7 @@ const ColumnItem: NextPage<ColumnItemType> = ({ className = "" }) => {
     >
       <div className="h-[1028px] w-[396px] flex flex-col items-start justify-start gap-[24px] min-w-[396px] max-w-full lg:flex-1 mq750:min-w-full">
         <ColumnItem1
-          carlingwood20172jpeg="/williams-install-5png@2x.png"
+          carlingwood20172jpeg="/WaterTreatment.png"
           heading="Water Treatment"
           serviceDescription="Our water treatment service involves diagnosing and fixing issues."
           propHeight="unset"

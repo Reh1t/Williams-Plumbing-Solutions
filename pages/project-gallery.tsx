@@ -23,7 +23,9 @@ const ProjectGallery: NextPage = () => {
           Projects
         </h1>
       </div>
+      <div className="flex flex-row items-center justify-center py-5 px-[70px] box-border max-w-full mq450:pl-5 mq450:pr-5 mq450:box-border">
       <Projects />
+      </div>
       <Footer1
         williams20Logo3transparen="/williams20logo3transparent20bgroundpng@2x.png"
         buttonsIcon="/buttons--icon3@2x.png"

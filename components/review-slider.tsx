@@ -12,7 +12,7 @@ const ImageSlider: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // change image every 3 seconds
+    }, 10000); // change image every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -29,12 +29,12 @@ const ImageSlider: React.FC = () => {
 
   return (
     <div className="relative w-full max-w-xl mx-auto">
-      <div className="overflow-hidden relative w-full h-64 rounded-lg shadow-lg">
+      <div className="overflow-hidden relative w-full h-64 rounded-lg ">
         {images.map((image, index) => (
           <img
             key={index}
             src={image}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1 000 ${
               index === currentIndex ? 'opacity-100' : 'opacity-0'
             }`}
             alt={`Slide ${index}`}
@@ -43,13 +43,13 @@ const ImageSlider: React.FC = () => {
       </div>
       <button
         onClick={goToPrevious}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-r-md"
+        className="absolute cursor-pointer top-1/2 left-0 transform -translate-y-1/2 bg-transparent text-black px-4 py-2 "
       >
         &#10094;
       </button>
       <button
         onClick={goToNext}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l-md"
+        className="absolute cursor-pointer top-1/2 right-0 transform -translate-y-1/2 bg-transparent text-black px-4 py-2 "
       >
         &#10095;
       </button>

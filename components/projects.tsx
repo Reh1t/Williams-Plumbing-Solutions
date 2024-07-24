@@ -1,107 +1,38 @@
 import type { NextPage } from "next";
-import ProductBox from "./product-box";
+import PhotoHolderBoxIcon from "../components/photo-holder-box-icon";
 
-export type ProjectsType = {
-  className?: string;
-};
-
-const Projects: NextPage<ProjectsType> = ({ className = "" }) => {
+const ProjectGallery: NextPage = () => {
   return (
-    <section
-      className={`self-stretch bg-white overflow-hidden flex flex-col items-center justify-start py-5 px-10 box-border max-w-full ${className}`}
-    >
-      <div className="self-stretch h-[1210.3px] relative max-w-full">
-        <div className="absolute top-[0px] left-[0px] w-[1360px] grid flex-row items-center justify-center gap-[20px] max-w-full grid-cols-[repeat(3,_minmax(330px,_1fr))] lg:justify-center lg:grid-cols-[repeat(2,_minmax(330px,_572px))] mq750:grid-cols-[minmax(330px,_1fr)]">
-          <ProductBox
-            pictureNewbuild201620177j="/picture--newbuild20162017-7jpg@2x.png"
-            productBoxPosition="unset"
-            productBoxTop="unset"
-            productBoxLeft="unset"
-            productBoxWidth="unset"
-          />
-          <ProductBox
-            pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-1@2x.png"
-            productBoxPosition="unset"
-            productBoxTop="unset"
-            productBoxLeft="unset"
-            productBoxWidth="unset"
-          />
-          <ProductBox
-            pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-2@2x.png"
-            productBoxPosition="unset"
-            productBoxTop="unset"
-            productBoxLeft="unset"
-            productBoxWidth="unset"
-          />
-        </div>
-        <div className="absolute top-[308.6px] left-[0px] w-[1360px] grid flex-row items-center justify-center gap-[20px] max-w-full grid-cols-[repeat(3,_minmax(330px,_1fr))] lg:justify-center lg:grid-cols-[repeat(2,_minmax(330px,_572px))] mq750:grid-cols-[minmax(330px,_1fr)]">
-          <ProductBox
-            pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-3@2x.png"
-            productBoxPosition="unset"
-            productBoxTop="unset"
-            productBoxLeft="unset"
-            productBoxWidth="unset"
-          />
-          <ProductBox
-            pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-4@2x.png"
-            productBoxPosition="unset"
-            productBoxTop="unset"
-            productBoxLeft="unset"
-            productBoxWidth="unset"
-          />
-          <ProductBox
-            pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-5@2x.png"
-            productBoxPosition="unset"
-            productBoxTop="unset"
-            productBoxLeft="unset"
-            productBoxWidth="unset"
-          />
-        </div>
-        <ProductBox
-          pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-6@2x.png"
-          productBoxPosition="absolute"
-          productBoxTop="617.1px"
-          productBoxLeft="0px"
-          productBoxWidth="440px"
-        />
-        <ProductBox
-          pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-7@2x.png"
-          productBoxPosition="absolute"
-          productBoxTop="617.1px"
-          productBoxLeft="460px"
-          productBoxWidth="440px"
-        />
-        <ProductBox
-          pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-8@2x.png"
-          productBoxPosition="absolute"
-          productBoxTop="617.1px"
-          productBoxLeft="920px"
-          productBoxWidth="440px"
-        />
-        <ProductBox
-          pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-9@2x.png"
-          productBoxPosition="absolute"
-          productBoxTop="925.7px"
-          productBoxLeft="0px"
-          productBoxWidth="440px"
-        />
-        <ProductBox
-          pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-10@2x.png"
-          productBoxPosition="absolute"
-          productBoxTop="925.7px"
-          productBoxLeft="460px"
-          productBoxWidth="440px"
-        />
-        <ProductBox
-          pictureNewbuild201620177j="/picture--newbuild20162017-7jpg-11@2x.png"
-          productBoxPosition="absolute"
-          productBoxTop="925.7px"
-          productBoxLeft="920px"
-          productBoxWidth="440px"
-        />
-      </div>
-    </section>
+    <div className="w-full relative bg-white flex flex-col items-start justify-start gap-[40px] leading-[normal] tracking-[normal] text-left text-45xl text-dark-blue font-small-text mq750:gap-[20px]">
+      <main className="self-stretch flex flex-row flex-wrap items-start justify-center py-0 px-5 box-border gap-[40px_38px] max-w-full mq675:gap-[19px]">
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-1@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-2@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-3@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-4@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-5@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-6@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-7@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-8@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-9@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-10@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-11@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-12@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-13@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-14@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-15@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-16@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-17@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-18@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-19@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-20@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-21@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-22@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-23@2x.png" />
+        <PhotoHolderBoxIcon photoHolderBox="/photoholderbox-24@2x.png" />
+      </main>
+    </div>
   );
 };
 
-export default Projects;
+export default ProjectGallery;
