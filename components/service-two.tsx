@@ -35,7 +35,7 @@ const ServiceTwo: NextPage<ServiceTwoType> = ({ className = "" }) => {
           </div>
         </button>
       </div>
-      <div className="h-96 w-[650px] flex flex-col items-start justify-start min-w-[650px] max-w-full mq825:min-w-full mq1400:flex-1">
+      <div className="h-auto w-auto flex flex-col items-start justify-start min-w-[650px] max-w-full mq825:min-w-full mq1400:flex-1">
         <img
           className="self-stretch flex-1 relative rounded-2xl max-w-full overflow-hidden max-h-full object-cover mq1400:self-stretch mq1400:w-auto"
           loading="lazy"

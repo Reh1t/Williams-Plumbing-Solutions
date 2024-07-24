@@ -25,18 +25,15 @@ export const handleRequestServiceSubmit = (event : any) => {
   const nameInput = document.getElementById("name") as HTMLInputElement;
   const phoneInput = document.getElementById("phone") as HTMLInputElement;;
   const emailInput = document.getElementById("email")  as HTMLInputElement;;
-  const serviceInput = document.getElementById("service")  as HTMLInputElement;;
 
   const name = nameInput.value;
   const phone = "+1" + phoneInput.value;
   const email = emailInput.value;
-  const service = serviceInput.value;
 
   const data = {
     name,
     phone,
     email,
-    service,
   };
   console.log(data);
 

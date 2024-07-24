@@ -21,7 +21,7 @@ const PanelImageContent2: NextPage<PanelImageContent2Type> = ({
     <section
       className={`self-stretch bg-white flex flex-row flex-wrap items-center justify-center py-space-1600 px-[26px] box-border gap-[40px] opacity-[0.8] max-w-full text-left text-3xl text-black1 font-small-text mq825:gap-[20px] mq825:pt-[42px] mq825:pb-[42px] mq825:box-border ${className}`}
     >
-      <div className="h-[218px] w-[340px] flex flex-col items-start justify-start gap-[44px] max-w-full mq450:gap-[22px]">
+      <div className="h-auto w-[340px] flex flex-col items-start justify-start gap-[44px] max-w-full mq450:gap-[22px]">
         <div className="w-[284px] flex flex-row items-start justify-start">
           <h3
             className="m-0 h-[29px] flex-1 relative text-inherit tracking-[0.25px] leading-[20px] font-bold font-inherit inline-block cursor-pointer mq450:text-lg mq450:leading-[16px]"
@@ -49,7 +49,7 @@ const PanelImageContent2: NextPage<PanelImageContent2Type> = ({
         />
       </div>
       <img
-        className="h-[350px] flex-1 max-w-full overflow-hidden object-cover min-w-[315px]"
+        className="h-auto flex-1 max-w-full overflow-hidden object-cover min-w-[315px]"
         alt=""
         src="/image-3@2x.png"
       />
@@ -70,7 +70,7 @@ const PanelImageContent2: NextPage<PanelImageContent2Type> = ({
             </div>
           </div>
           <div className="self-stretch flex flex-row items-start justify-start max-w-full">
-            <div className="h-44 flex-1 relative leading-[140%] inline-block max-w-full">
+            <div className="h-auto flex-1 relative leading-[140%] inline-block max-w-full">
               <p className="m-0">{`Let us help ensure the purity of every drop you drink with our additional UV purification system. Water filters and softeners may reduce organic contaminants and sediment, but only a UV system can guarantee protection against bacteria and viruses. `}</p>
               <p className="m-0">
                 We are here to guide and help you with getting great tasting
@@ -87,8 +87,10 @@ const PanelImageContent2: NextPage<PanelImageContent2Type> = ({
             alt=""
             src="/star.svg"
           />
-          <div className="bg-transparent relative text-base leading-[100%] font-small-text text-text-brand-on-brand text-left inline-block min-w-[68px]"
-          onClick={onContactButtonClick}>
+          <div
+            className="bg-transparent relative text-base leading-[100%] font-small-text text-text-brand-on-brand text-left inline-block min-w-[68px]"
+            onClick={onContactButtonClick}
+          >
             Call Now
           </div>
           <img

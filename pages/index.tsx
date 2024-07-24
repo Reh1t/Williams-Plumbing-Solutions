@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         </div>
         <FrameComponent />
         <div className="self-stretch flex flex-row items-center justify-between py-0 px-10 box-border max-w-full gap-[20px] mq1400:flex-wrap">
-          <div className="h-[231px] w-[500px] flex flex-col items-start justify-start min-w-[500px] max-w-full mq825:min-w-full mq1400:flex-1">
+          <div className="h-auto w-[500px] flex flex-col items-start justify-start min-w-[500px] max-w-full mq825:min-w-full mq1400:flex-1">
             <img
               className="self-stretch flex-1 relative rounded-2xl max-w-full overflow-hidden max-h-full object-cover mq1400:self-stretch mq1400:w-auto"
               loading="lazy"
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
         </div>
         <ServiceTwo />
         <div className="self-stretch flex flex-row items-center justify-between py-0 px-10 box-border max-w-full gap-[20px] mq1400:flex-wrap">
-          <div className="h-[327px] w-[650px] flex flex-col items-start justify-start min-w-[653px] max-w-full mq825:min-w-full mq1400:flex-1">
+          <div className="h-auto w-auto flex flex-col items-start justify-start min-w-[653px] max-w-full mq825:min-w-full mq1400:flex-1">
             <img
               className="self-stretch flex-1 relative rounded-2xl max-w-full overflow-hidden max-h-full object-cover mq1400:self-stretch mq1400:w-auto"
               alt=""

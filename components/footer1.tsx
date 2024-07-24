@@ -59,7 +59,7 @@ const Footer1: NextPage<Footer1Type> = ({
 
   return (
     <footer
-      className={`self-stretch bg-whitesmoke-200 overflow-hidden flex flex-row flex-wrap items-start justify-start py-[38px] px-[26px] box-border gap-[12px] max-w-full text-left text-base text-black1 font-small-text ${className}`}
+      className={`self-stretch bg-whitesmoke-200 overflow-hidden flex flex-row flex-wrap items-start justify-center mq675:justify-start py-[38px] px-[26px] box-border gap-[12px] max-w-full text-left text-base text-black1 font-small-text ${className}`}
     >
       <div className="flex flex-col items-center justify-center py-0 px-2.5 box-border gap-[8px] max-w-full text-5xl">
         <div className="flex flex-row items-start justify-end py-0 pr-2.5 pl-[31px] shrink-0">
@@ -141,7 +141,7 @@ const Footer1: NextPage<Footer1Type> = ({
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-start justify-start gap-[14px]">
+      <div className="flex flex-col items-start justify-start mq750:mt-7 gap-[14px]">
         <div
           className="relative leading-[150%] font-medium inline-block min-w-[71px] cursor-pointer"
           onClick={onAboutUsTextClick}
@@ -156,7 +156,7 @@ const Footer1: NextPage<Footer1Type> = ({
         </div>
       </div>
       <div className="flex-1 flex flex-col items-end justify-start py-0 px-3 box-border gap-[20px] min-w-[307px] max-w-full text-base-8 text-darkslategray-300">
-        <div className="self-stretch flex flex-row items-center justify-start py-0 pr-10 pl-0 box-border gap-[34px] max-w-full mq450:flex-wrap mq450:gap-[17px]">
+        <div className="self-stretch flex flex-row items-center justify-start py-0 pr-10 pl-0 box-border gap-[34px] max-w-full mq450:flex-wrap mq450:gap-8 mq825:mt-7">
           <div className="w-6 overflow-hidden shrink-0 flex flex-col items-start justify-start py-px pr-[3px] pl-px box-border">
             <img
               className="w-[19.5px] h-[18.5px] relative"

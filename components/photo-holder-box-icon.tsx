@@ -11,7 +11,7 @@ const PhotoHolderBoxIcon: NextPage<PhotoHolderBoxIconType> = ({
 }) => {
   return (
     <img
-      className={`w-[400px] relative rounded-xl max-h-full overflow-hidden shrink-0 object-cover max-w-full ${className}`}
+      className={`w-[394px] relative rounded-xl max-h-full overflow-hidden shrink-0 object-cover max-w-full ${className}`}
       loading="lazy"
       alt=""
       src={photoHolderBox}

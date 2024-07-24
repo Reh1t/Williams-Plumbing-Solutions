@@ -1,16 +1,21 @@
 import type { NextPage } from "next";
 import ColumnItem1 from "./column-item1";
 import { useCallback } from "react";
+import { useRouter } from "next/router";
 
 export type ColumnItemType = {
   className?: string;
 };
 
 const ColumnItem: NextPage<ColumnItemType> = ({ className = "" }) => {
+  const router = useRouter();
+
+  const onWaterTreatmentClick = useCallback(() => {
+    router.push("/more-u-v-water-purification");
+  }, [router]);
+
   const onButtonClick = useCallback(() => {
-    const anchor = document.querySelector(
-      "[data-scroll-to='scrollarea']"
-    );
+    const anchor = document.querySelector("[data-scroll-to='scrollarea']");
     if (anchor) {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }
@@ -24,16 +29,13 @@ const ColumnItem: NextPage<ColumnItemType> = ({ className = "" }) => {
         <ColumnItem1
           carlingwood20172jpeg="/WaterTreatment.png"
           heading="Water Treatment"
-          serviceDescription="Our water treatment service involves diagnosing and fixing issues."
+          serviceDescription="Solutions for clean, safe, and reliable water for your home or business."
           propHeight="unset"
           propGap="unset"
           propFlex="1"
-          onButtonClick={onButtonClick}
+          onButtonClick={onWaterTreatmentClick}
         />
-        <div
-          className="self-stretch h-[468px] shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-2xl bg-whitesmoke-100 box-border flex flex-col items-start justify-start py-9 pr-5 pl-[72px] gap-[16px] flex-[0.8419] border-[1px] border-solid border-gainsboro-100 mq450:pl-5 mq450:box-border"
-          data-scroll-to="scrollarea"
-        >
+        <div className="self-stretch h-[468px] shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-2xl bg-whitesmoke-100 box-border flex flex-col items-start justify-start py-9 pr-5 pl-[72px] gap-[16px] flex-[0.8419] border-[1px] border-solid border-gainsboro-100 mq450:pl-5 mq450:box-border">
           <div className="w-[252px] relative leading-[25.6px] flex items-center">
             Water Softeners
           </div>
@@ -58,12 +60,16 @@ const ColumnItem: NextPage<ColumnItemType> = ({ className = "" }) => {
         <ColumnItem1
           carlingwood20172jpeg="/commercial-4jpg@2x.png"
           heading={`Commercial & Industrial`}
-          serviceDescription="Our water heater repair service involves diagnosing and fixing issues."
+          serviceDescription="We are equipped to handle the unique challenges of larger-scale operations."
           propHeight="unset"
           propGap="unset"
           propFlex="unset"
+          onButtonClick={onButtonClick}
         />
-        <div className="self-stretch shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-2xl bg-whitesmoke-100 flex flex-col items-start justify-start py-[34px] pr-5 pl-[72px] gap-[16px] border-[1px] border-solid border-gainsboro-100 mq450:pl-5 mq450:box-border mq750:pt-[22px] mq750:pb-[22px] mq750:box-border">
+        <div
+          className="self-stretch shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-2xl bg-whitesmoke-100 flex flex-col items-start justify-start py-[34px] pr-5 pl-[72px] gap-[16px] border-[1px] border-solid border-gainsboro-100 mq450:pl-5 mq450:box-border mq750:pt-[22px] mq750:pb-[22px] mq750:box-border"
+          data-scroll-to="scrollarea"
+        >
           <div className="w-[249px] relative leading-[26px] flex items-center">
             Condo and Apartment Complex
           </div>

@@ -32,11 +32,14 @@ const PanelImageContentReverse: NextPage<PanelImageContentReverseType> = ({
           <div className="flex-1 relative leading-[140%] inline-block max-w-full">{`UV, on the other hand, adds nothing to the water. It simply kills bacteria and other microorganisms as they pass by the UV light. Ultraviolet systems also include a power supply, sometimes called a ballast, for powering the lamp. Residential ultraviolet light water filters are usually plumbed on the main water line for a home or cottage. `}</div>
         </div>
       </div>
+      <div className="h-[351px] w-[484px] flex flex-col items-center justify-center min-w-[484px] max-w-full mq825:min-w-full mq1425:flex-1">
+        
       <img
         className="h-[351px] w-[484px] rounded-17xl overflow-hidden shrink-0 object-cover max-w-full mq1425:flex-1"
         alt=""
         src="/image-5@2x.png"
       />
+      </div>
     </section>
   );
 };

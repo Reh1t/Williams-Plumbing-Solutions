@@ -15,7 +15,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
     <div
       className={`self-stretch flex flex-row items-center justify-between py-0 px-10 box-border max-w-full gap-[20px] text-left text-13xl text-black1 font-small-text mq1400:flex-wrap mq1400:justify-center ${className}`}
     >
-      <div className="w-[659px] flex flex-col items-start justify-center gap-[24px] min-w-[659px] max-w-full mq825:min-w-full mq1400:flex-1">
+      <div className="w-auto flex flex-col items-start justify-center gap-[24px] min-w-[659px] max-w-full mq825:min-w-full mq1400:flex-1">
         <div className="flex flex-row items-center justify-center">
           <h1 className="m-0 relative text-inherit leading-[110%] font-semibold font-inherit mq825:text-7xl mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
             Plumbing
@@ -40,7 +40,7 @@ const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
           </a>
         </button>
       </div>
-      <div className="h-[255px] w-[650px] flex flex-col items-start justify-start min-w-[650px] max-w-full mq825:min-w-full mq1400:flex-1">
+      <div className="h-auto w-auto flex flex-col items-start justify-start min-w-[650px] max-w-full mq825:min-w-full mq1400:flex-1">
         <img
           className="self-stretch flex-1 relative rounded-2xl max-w-full overflow-hidden max-h-full object-cover mq1400:self-stretch mq1400:w-auto"
           loading="lazy"

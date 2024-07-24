@@ -57,30 +57,7 @@ const ServiceRequestForm = () => {
                   required
                 />
               </div>
-              <label
-                className="m-0 w-[295px] text-left relative text-sm text-grey-1 inline-block mq450:text-lgi"
-                htmlFor="service"
-              >
-                services
-              </label>
-              <div className="self-stretch rounded-lg bg-white flex flex-row justify-start whitespace-nowrap">
-                <select
-                  className="w-full [border:none] [outline:none] bg-white h-16 rounded-lg flex flex-row items-center py-4 px-6 box-border font-form-field text-xs text-black min-w-[209px]"
-                  defaultValue=""
-                  id="service"
-                  required
-                >
-                  <option value="" selected disabled>
-                    Choose a Service
-                  </option>
-                  <option value="Plumbing">Plumbing</option>
-                  <option value="Heating">Heating</option>
-                  <option value="Water Treatment">Water Treatment</option>
-                  <option value="Commerical/Industrial">
-                    Commerical/Industrial
-                  </option>
-                </select>
-              </div>
+              
             </div>
             <button
               type="submit"

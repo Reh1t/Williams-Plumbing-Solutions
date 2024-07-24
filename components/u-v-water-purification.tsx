@@ -26,13 +26,12 @@ const UVWaterPurification: NextPage<UVWaterPurificationType> = ({
           </div>
         </div>
         <div className="self-stretch flex flex-row items-start justify-start max-w-full">
-          <div className="h-[308px] flex-1 relative leading-[140%] inline-block max-w-full">
+          <div className="h-auto flex-1 relative leading-[140%] inline-block max-w-full">
             <p className="m-0">
               Enjoy a safe and clean drinking water supply by using one of our
               UV Water Purifiers!
             </p>
             <p className="m-0">
-              {" "}
               Our advanced purification systems uses ultraviolet light to
               eradicate harmful bacteria and viruses without any added
               chemicals. This powerful antiviral technology penetrates the

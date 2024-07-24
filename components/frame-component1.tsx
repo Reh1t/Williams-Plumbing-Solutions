@@ -15,6 +15,14 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }
   }, []);
+  const onButton2Click = useCallback(() => {
+    const anchor = document.querySelector(
+      "[data-scroll-to='backgroundBorderShadow']"
+    );
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
 
   return (
     <section
@@ -24,7 +32,7 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
         <ColumnItem1
           carlingwood20172jpeg="/carlingwood2017-2jpeg1@2x.png"
           heading="Plumbing"
-          serviceDescription="Our water heater repair service involves diagnosing and fixing issues."
+          serviceDescription="Our comprehensive plumbing services including repair, installation, and maintenance."
           onButtonClick={onButtonClick}
         />
         <div
@@ -79,13 +87,15 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
         <ColumnItem1
           carlingwood20172jpeg="/carlingwood2017-2jpeg-1@2x.png"
           heading="Heating"
-          serviceDescription="Our water heater repair service involves diagnosing and fixing issues."
-          propHeight="486px"
+          serviceDescription="Our heating services include the installation, maintenance, and repair of efficient and reliable heating systems, ensuring your home or business stays warm and comfortable throughout the year"
+          propHeight="600px"
           propGap="22px"
           propFlex="unset"
-          onButtonClick={onButtonClick}
+          onButtonClick={onButton2Click}
         />
-        <div className="self-stretch flex-1 shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-2xl bg-whitesmoke-100 flex flex-col items-start justify-start py-9 pr-5 pl-[72px] gap-[16px] border-[1px] border-solid border-gainsboro-100 mq450:pl-5 mq450:box-border">
+        <div className="self-stretch flex-1 shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-2xl bg-whitesmoke-100 flex flex-col items-start justify-start py-9 pr-5 pl-[72px] gap-[16px] border-[1px] border-solid border-gainsboro-100 mq450:pl-5 mq450:box-border"
+          data-scroll-to="backgroundBorderShadow"
+          >
           <div className="w-[235px] relative leading-[25.6px] flex items-center">
             Boilers
           </div>
