@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useMemo, type CSSProperties, useCallback } from "react";
+import { useMemo, type CSSProperties, useCallback, useState } from "react";
 import { useRouter } from "next/router";
 
 export type Header1Type = {
@@ -48,6 +48,12 @@ const Header1: NextPage<Header1Type> = ({
     router.push("/contact-us1");
   }, [router]);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header
       className={`self-stretch bg-white overflow-hidden flex flex-col items-start justify-start max-w-full text-left text-xl text-black1 font-small-text ${className}`}
@@ -65,7 +71,12 @@ const Header1: NextPage<Header1Type> = ({
             Williams Plumbing Solutions
           </b>
         </div>
-        <nav className="flex-1 flex flex-row items-center justify-center [row-gap:20px] max-w-full whitespace-nowrap text-left text-base-8 text-gray-400 font-small-text mq450:flex-wrap">
+        
+        <nav
+          className={`flex-1 flex flex-row items-center justify-center [row-gap:20px] max-w-full whitespace-nowrap text-left text-base-8 text-gray-400 font-small-text mq450:flex-wrap ${
+            isOpen ? "lg:hidden" : "lg:block"
+          } lg:block`}
+        >
           <div
             className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
             onClick={onHomeClick}
@@ -116,14 +127,31 @@ const Header1: NextPage<Header1Type> = ({
               Williams Septic
             </a>
           </div>
+          <button
+            className="flex-1 cursor-pointer py-2 px-[31px] bg-green shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-13xl flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-mediumslateblue hover:bg-deepskyblue hover:box-border hover:border-[1px] hover:border-solid hover:border-royalblue"
+            onClick={onContactButtonClick}
+          >
+            <a className="relative text-base-8 leading-[25.6px] font-bold font-small-text text-white text-center">
+              Contact Us Today
+            </a>
+          </button>
         </nav>
-        <button
-          className="flex-1 cursor-pointer py-2 px-[31px] bg-green shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-13xl flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-mediumslateblue hover:bg-deepskyblue hover:box-border hover:border-[1px] hover:border-solid hover:border-royalblue"
-          onClick={onContactButtonClick}
-        >
-          <a className="relative text-base-8 leading-[25.6px] font-bold font-small-text text-white text-center">
-            Contact Us Today
-          </a>
+        <button className="hidden lg:block text-black bg-transparent" onClick={toggleMenu}>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              color={isOpen ? "black" : "red"}
+              d={isOpen ? "M4 6h16M4 12h16M4 18h16" : "M6 18L18 6M6 6l12 12"}
+            ></path>
+          </svg>
         </button>
       </div>
       <div className="self-stretch bg-steelblue flex flex-col items-start justify-center py-2.5 px-[61px] box-border max-w-full text-29xl font-ledger mq1400:pl-[30px] mq1400:pr-[30px] mq1400:box-border">
@@ -135,15 +163,15 @@ const Header1: NextPage<Header1Type> = ({
               alt=""
               src="/tag-hd-logo@2x.png"
             />
-            <h1 className="m-0 flex-1 relative text-[100px] mq1050:text-53xl tracking-[-0.1em] leading-[53px] font-normal font-ledger inline-block min-w-[213px] max-w-full mq825:text-19xl mq825:leading-[42px] mq450:text-10xl mq450:leading-[32px]">
+            <h1 className="m-0 flex-1 relative text-[100px] tracking-[-0.1em] leading-[53px] font-normal font-ledger inline-block min-w-[213px] max-w-full lg:text-53xl mq1050:text-32xl mq825:text-19xl mq825:leading-[42px] mq450:text-10xl mq450:leading-[32px]">
               WILLIAMS
             </h1>
           </div>
-          <div className="w-auto mr-10 flex flex-col items-start justify-start text-32xl mq1050:text-19xl ">
-            <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit mq825:text-7xl mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
+          <div className="w-auto mr-10 flex flex-col items-start justify-start text-32xl mq1050:text-19xl mq825:text-7xl">
+            <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit  mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
               Plumbing
             </h1>
-            <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit mq825:text-7xl mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
+            <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
               Solutions
             </h1>
           </div>

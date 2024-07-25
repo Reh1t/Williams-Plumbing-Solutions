@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
     "firebase": "^10.12.4",
     "flowbite": "^2.4.1",
     "next": "^14.1.4",

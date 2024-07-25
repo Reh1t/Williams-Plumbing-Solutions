@@ -22,7 +22,7 @@ const Feeback: NextPage<FeebackType> = ({ className = "" }) => {
         </div>
       </div>
       <img
-        className="h-[625px] flex-1 relative max-w-full overflow-hidden object-cover min-w-[452px] mq825:min-w-full"
+        className="flex-1 relative max-w-full overflow-hidden object-cover w-auto h-auto"
         loading="lazy"
         alt=""
         src="/pexels-photo-by-griffin-wooldridge@2x.png"
