@@ -74,7 +74,7 @@ const Header1: NextPage<Header1Type> = ({
         
         <nav
           className={`flex-1 flex flex-row items-center justify-center [row-gap:20px] max-w-full whitespace-nowrap text-left text-base-8 text-gray-400 font-small-text mq450:flex-wrap ${
-            isOpen ? "lg:hidden" : "lg:block"
+            isOpen ? "lg:block" : "lg:hidden"
           } lg:block`}
         >
           <div
@@ -148,8 +148,8 @@ const Header1: NextPage<Header1Type> = ({
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              color={isOpen ? "black" : "red"}
-              d={isOpen ? "M4 6h16M4 12h16M4 18h16" : "M6 18L18 6M6 6l12 12"}
+              color={isOpen ? "red" : "black"}
+              d={isOpen ?  "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
             ></path>
           </svg>
         </button>
