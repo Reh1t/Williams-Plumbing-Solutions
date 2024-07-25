@@ -58,7 +58,26 @@ const ServiceRequestForm = () => {
                 />
               </div>
               
+              
             </div>
+            <div className="self-stretch rounded-lg bg-white flex flex-row justify-start whitespace-nowrap">
+                <select
+                  className="w-full [border:none] [outline:none] bg-white h-12 rounded-lg flex flex-row items-center py-4 px-6 box-border font-form-field text-xs text-black min-w-[209px]"
+                  defaultValue=""
+                  id="service"
+                  required
+                >
+                  <option value="" selected disabled>
+                    Choose a Service
+                  </option>
+                  <option value="Plumbing">Plumbing</option>
+                  <option value="Heating">Heating</option>
+                  <option value="Water Treatment">Water Treatment</option>
+                  <option value="Commerical/Industrial">
+                    Commerical/Industrial
+                  </option>
+                </select>
+              </div>
             <button
               type="submit"
               className="cursor-pointer w-full [border:none] py-[18px] px-[50px] bg-green rounded-lg flex flex-row items-center justify-center whitespace-nowrap hover:bg-deepskyblue"
