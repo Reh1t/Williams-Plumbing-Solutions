@@ -48,6 +48,10 @@ const Header1: NextPage<Header1Type> = ({
     router.push("/contact-us1");
   }, [router]);
 
+  const onWilliamsButtonClick = useCallback(() => {
+    router.push("https://williams-septic.vercel.app/");
+  }, [router]);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -71,9 +75,9 @@ const Header1: NextPage<Header1Type> = ({
             Williams Plumbing Solutions
           </b>
         </div>
-        
+
         <nav
-          className={`flex-1 flex flex-row items-center justify-center [row-gap:20px] max-w-full whitespace-nowrap text-left text-base-8 text-gray-400 font-small-text mq450:flex-wrap ${
+          className={`flex-1 flex flex-row items-center justify-center px-5 [row-gap:20px] max-w-full whitespace-nowrap text-left text-base-8 text-gray-400 font-small-text mq450:flex-wrap ${
             isOpen ? "lg:block" : "lg:hidden"
           } lg:block`}
         >
@@ -122,13 +126,16 @@ const Header1: NextPage<Header1Type> = ({
               Blog
             </a>
           </div>
-          <div className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer">
+          <div
+            className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
+            onClick={onWilliamsButtonClick}
+          >
             <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer">
-              Williams Septic
+              Septic
             </a>
           </div>
           <button
-            className="flex-1 cursor-pointer py-2 px-[31px] bg-green shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-13xl flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-mediumslateblue hover:bg-deepskyblue hover:box-border hover:border-[1px] hover:border-solid hover:border-royalblue"
+            className="flex-1 cursor-pointer py-2 px-8 ml-10 bg-green shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-13xl flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-mediumslateblue hover:bg-deepskyblue hover:box-border hover:border-[1px] hover:border-solid hover:border-royalblue"
             onClick={onContactButtonClick}
           >
             <a className="relative text-base-8 leading-[25.6px] font-bold font-small-text text-white text-center">
@@ -136,7 +143,10 @@ const Header1: NextPage<Header1Type> = ({
             </a>
           </button>
         </nav>
-        <button className="hidden lg:block text-black bg-transparent" onClick={toggleMenu}>
+        <button
+          className="hidden lg:block text-black bg-transparent"
+          onClick={toggleMenu}
+        >
           <svg
             className="w-6 h-6"
             fill="none"
@@ -149,7 +159,7 @@ const Header1: NextPage<Header1Type> = ({
               strokeLinejoin="round"
               strokeWidth="2"
               color={isOpen ? "red" : "black"}
-              d={isOpen ?  "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
             ></path>
           </svg>
         </button>
