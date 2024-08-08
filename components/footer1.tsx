@@ -56,6 +56,10 @@ const Footer1: NextPage<Footer1Type> = ({
   const onContactUsTextClick = useCallback(() => {
     router.push("/contact-us1");
   }, [router]);
+  
+  const onWilliamsButtonClick = useCallback(() => {
+    router.push("https://williams-septic.vercel.app/");
+  }, [router]);
 
   return (
     <footer
@@ -123,12 +127,11 @@ const Footer1: NextPage<Footer1Type> = ({
           </div>
         </div>
         <div className="flex-1 flex flex-col items-start justify-center gap-[14px] min-w-[122px] cursor-pointer" onClick={onUVMoreTextClick}>
-          <div className="flex flex-row items-center justify-center">
-            <div className="relative leading-[150%] font-medium inline-block min-w-[129px]">
+
+          <div className="self-stretch flex flex-col items-start justify-start gap-[14px] text-darkslategray-100">
+            <div className="self-stretch relative leading-[150%] font-medium">
               Water Treatment
             </div>
-          </div>
-          <div className="self-stretch flex flex-col items-start justify-start gap-[14px] text-darkslategray-100">
             <div className="self-stretch relative leading-[150%] font-medium">
               Water Softeners
             </div>
@@ -143,7 +146,7 @@ const Footer1: NextPage<Footer1Type> = ({
       </div>
       <div className="flex flex-col items-start justify-start mq750:mt-7 gap-[14px]">
         <div
-          className="relative leading-[150%] font-medium inline-block min-w-[71px] cursor-pointer"
+          className="relative leading-[150%] font-medium text-darkslategray-100 inline-block min-w-[86px] cursor-pointer"
           onClick={onAboutUsTextClick}
         >
           About Us
@@ -153,6 +156,12 @@ const Footer1: NextPage<Footer1Type> = ({
           onClick={onContactUsTextClick}
         >
           Contact Us
+        </div>
+        <div
+          className="relative leading-[150%] font-medium text-darkslategray-100 inline-block min-w-[86px] cursor-pointer"
+          onClick={onWilliamsButtonClick}
+        >
+          Septic
         </div>
       </div>
       <div className="flex-1 flex flex-col items-end justify-start py-0 px-3 box-border gap-[20px] min-w-[307px] max-w-full text-base-8 text-darkslategray-300">
