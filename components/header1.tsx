@@ -8,12 +8,17 @@ export type Header1Type = {
   /** Style props */
   navHEADERAlignSelf?: CSSProperties["alignSelf"];
   navHEADERFlex?: CSSProperties["flex"];
+
+  name1?: string;
+  name2?: string;
 };
 
 const Header1: NextPage<Header1Type> = ({
   className = "",
   navHEADERAlignSelf,
   navHEADERFlex,
+  name1 = "Plumbing",
+  name2 = "Solutions",
 }) => {
   const tAGHeaderStyle: CSSProperties = useMemo(() => {
     return {
@@ -23,6 +28,10 @@ const Header1: NextPage<Header1Type> = ({
   }, [navHEADERAlignSelf, navHEADERFlex]);
 
   const router = useRouter();
+
+  const onSolutionClick = useCallback(() => {
+    router.push("https://williamssolutionpro.vercel.app/");
+  }, [router]);
 
   const onHomeClick = useCallback(() => {
     router.push("/");
@@ -40,8 +49,8 @@ const Header1: NextPage<Header1Type> = ({
     router.push("/project-gallery");
   }, [router]);
 
-  const onMoreTextClick = useCallback(() => {
-    router.push("/more-u-v-water-purification");
+  const onWaterTextClick = useCallback(() => {
+    router.push("/water-treatment");
   }, [router]);
 
   const onContactButtonClick = useCallback(() => {
@@ -52,10 +61,26 @@ const Header1: NextPage<Header1Type> = ({
     router.push("https://williams-septic.vercel.app/");
   }, [router]);
 
-  const [isOpen, setIsOpen] = useState(false);
+  const onExcavationButtonClick = useCallback(() => {
+    router.push("https://williamsexcavation.vercel.app/");
+  }, [router]);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const onLoggingButtonClick = useCallback(() => {
+    router.push("https://williamslogging.vercel.app/");
+  }, [router]);
+
+  const [isOpen, setIsOpen] = useState(false);
+  let closeTimeout: NodeJS.Timeout;
+
+  const openMenu = () => {
+    clearTimeout(closeTimeout);
+    setIsOpen(true);
+  };
+
+  const closeMenu = () => {
+    closeTimeout = setTimeout(() => {
+      setIsOpen(false);
+    }, 200); // Adjust the delay as needed
   };
 
   return (
@@ -70,9 +95,10 @@ const Header1: NextPage<Header1Type> = ({
             loading="lazy"
             alt=""
             src="/williams20logo3transparent20bgroundpng@2x.png"
+            onClick={onSolutionClick}
           />
-          <b className="relative leading-[32px] mq450:text-base mq450:leading-[26px]">
-            Williams Plumbing Solutions
+          <b className="relative leading-[32px] mq450:text-base mq450:leading-[26px] cursor-pointer" onClick={onSolutionClick}>
+            Williams Solutions.Pro
           </b>
         </div>
 
@@ -113,25 +139,55 @@ const Header1: NextPage<Header1Type> = ({
               Projects
             </a>
           </div>
-          <div className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer">
-            <a
-              className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
-              onClick={onMoreTextClick}
+          <div className="relative">
+            <div
+              className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
+              onMouseEnter={openMenu}
+              onMouseLeave={closeMenu}
             >
-              Water Treatment
-            </a>
+              <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px]">
+                Williams Services
+                <img className="relative w-3 h-3 ml-3" src="/down-arrow.png" alt="dwon arrrow" />
+              </a>
+            </div>
+            <div
+              className={`absolute top-full left-0 bg-white shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-lg z-10 ${
+                isOpen ? "block" : "hidden"
+              }`}
+              onMouseEnter={openMenu}
+              onMouseLeave={closeMenu}
+            >
+              <div className="flex flex-col items-start justify-start py-2 px-4 gap-[8px]">
+                <a
+                  className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+                  onClick={onHomeClick}
+                >
+                  Plumbing Solution
+                </a>
+                <a
+                  className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+                  onClick={onWaterTextClick}
+                >
+                  Water Treatment
+                </a>
+                <a
+                  className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+                  onClick={onWilliamsButtonClick}
+                >
+                  Septic
+                </a>
+                <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer" onClick={onExcavationButtonClick}>
+                  Excavation
+                </a>
+                <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer" onClick={onLoggingButtonClick}>
+                  Logging
+                </a>
+              </div>
+            </div>
           </div>
           <div className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer">
             <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer">
               Blog
-            </a>
-          </div>
-          <div
-            className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
-            onClick={onWilliamsButtonClick}
-          >
-            <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer">
-              Septic
             </a>
           </div>
           <button
@@ -145,7 +201,7 @@ const Header1: NextPage<Header1Type> = ({
         </nav>
         <button
           className="hidden lg:block text-black bg-transparent"
-          onClick={toggleMenu}
+          onClick={openMenu}
         >
           <svg
             className="w-6 h-6"
@@ -179,10 +235,10 @@ const Header1: NextPage<Header1Type> = ({
           </div>
           <div className="w-auto mr-10 flex flex-col items-start justify-start text-32xl mq1050:text-19xl mq825:text-7xl">
             <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit  mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
-              Plumbing
+              {name1}
             </h1>
             <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
-              Solutions
+              {name2}
             </h1>
           </div>
         </div>

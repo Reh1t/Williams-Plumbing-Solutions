@@ -22,7 +22,7 @@ const Home: NextPage = () => {
   }, [router]);
   return (
     <div className="w-full relative bg-white flex flex-col items-center justify-start leading-[normal] tracking-[normal]">
-      <Header1 />
+      <Header1/>
       <div className="self-stretch relative max-w-full overflow-hidden max-h-full object-cover">
       <ImageSlider images={images} />
       </div >

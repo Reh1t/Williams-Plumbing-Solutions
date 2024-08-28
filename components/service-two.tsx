@@ -9,7 +9,7 @@ export type ServiceTwoType = {
 const ServiceTwo: NextPage<ServiceTwoType> = ({ className = "" }) => {
   const router = useRouter();
   const onServicesTextClick = useCallback(() => {
-    router.push("/more-u-v-water-purification");
+    router.push("/water-treatment");
   }, [router]);
   return (
     <div

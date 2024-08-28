@@ -11,7 +11,7 @@ const ColumnItem: NextPage<ColumnItemType> = ({ className = "" }) => {
   const router = useRouter();
 
   const onWaterTreatmentClick = useCallback(() => {
-    router.push("/more-u-v-water-purification");
+    router.push("/water-treatment");
   }, [router]);
 
   const onButtonClick = useCallback(() => {
