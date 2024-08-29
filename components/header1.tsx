@@ -233,7 +233,7 @@ const Header1: NextPage<Header1Type> = ({
               WILLIAMS
             </h1>
           </div>
-          <div className="w-auto mr-10 flex flex-col items-start justify-start text-32xl mq1050:text-19xl mq825:text-7xl">
+          <div className="w-auto mr-10 flex flex-col items-start justify-start text-32xl font-normal font-ledger mq1050:text-19xl mq825:text-7xl">
             <h1 className="m-0 self-stretch relative text-inherit leading-[110%] font-normal font-inherit  mq825:leading-[28px] mq450:text-lgi mq450:leading-[21px]">
               {name1}
             </h1>
