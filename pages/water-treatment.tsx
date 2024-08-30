@@ -19,7 +19,6 @@ const MoreUVWaterPurification: NextPage = () => {
         name1="Water"
         name2="Treatment"
       />
-
       <PageProduct />
       <UVWaterPurification />
       <PanelImageContent2 />
