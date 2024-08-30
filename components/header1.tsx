@@ -34,30 +34,35 @@ const Header1: NextPage<Header1Type> = ({
   }, [router]);
 
   const onHomeClick = useCallback(() => {
-    router.push("/");
+    router.push("https://williams-plumbing-solutions.vercel.app/");
   }, [router]);
 
-  const onTAGHdLinkNormalContainerClick = useCallback(() => {
-    router.push("/about-us");
-  }, [router]);
-
-  const onServicesTextClick = useCallback(() => {
-    router.push("/services");
+  const onServiesTextClick = useCallback(() => {
+    router.push("https://williams-plumbing-solutions.vercel.app/services");
   }, [router]);
 
   const onProjectsTextClick = useCallback(() => {
-    router.push("/project-gallery");
+    router.push("https://williams-plumbing-solutions.vercel.app/project-gallery");
   }, [router]);
+
 
   const onWaterTextClick = useCallback(() => {
-    router.push("/water-treatment");
+    router.push("https://williams-plumbing-solutions.vercel.app/water-treatment");
   }, [router]);
 
-  const onContactButtonClick = useCallback(() => {
-    router.push("/contact-us1");
+  const onAboutUsTextClick = useCallback(() => {
+    router.push("https://williams-plumbing-solutions.vercel.app/about-us");
   }, [router]);
 
-  const onWilliamsButtonClick = useCallback(() => {
+  const onContactUsTextClick = useCallback(() => {
+    router.push("https://williams-plumbing-solutions.vercel.app/contact-us1");
+  }, [router]);
+
+  const onBlogTextClick = useCallback(() => {
+    router.push("https://blog-delta-three-74.vercel.app/");
+  }, [router]);
+
+  const onSepticButtonClick = useCallback(() => {
     router.push("https://williams-septic.vercel.app/");
   }, [router]);
 
@@ -68,6 +73,8 @@ const Header1: NextPage<Header1Type> = ({
   const onLoggingButtonClick = useCallback(() => {
     router.push("https://williamslogging.vercel.app/");
   }, [router]);
+
+
 
   const [isOpen, setIsOpen] = useState(false);
   let closeTimeout: NodeJS.Timeout;
@@ -117,7 +124,7 @@ const Header1: NextPage<Header1Type> = ({
           </div>
           <div
             className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer"
-            onClick={onTAGHdLinkNormalContainerClick}
+            onClick={onAboutUsTextClick}
           >
             <a className="relative leading-[26px] text-[inherit] inline-block">
               About
@@ -126,7 +133,7 @@ const Header1: NextPage<Header1Type> = ({
           <div className="flex flex-row items-center justify-center py-[7px] px-[15px] box-border font-bold text-black">
             <a
               className="relative leading-[26px] text-[inherit] inline-block min-w-[65px] cursor-pointer"
-              onClick={onServicesTextClick}
+              onClick={onServiesTextClick}
             >
               Services
             </a>
@@ -172,7 +179,7 @@ const Header1: NextPage<Header1Type> = ({
                 </a>
                 <a
                   className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
-                  onClick={onWilliamsButtonClick}
+                  onClick={onSepticButtonClick}
                 >
                   Septic
                 </a>
@@ -186,13 +193,14 @@ const Header1: NextPage<Header1Type> = ({
             </div>
           </div>
           <div className="flex flex-row items-center justify-center py-[7px] px-4 font-bold text-black cursor-pointer">
-            <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer">
+            <a className="relative leading-[26px] text-[inherit] inline-block min-w-[39px] cursor-pointer"
+          onClick={onBlogTextClick}>
               Blog
             </a>
           </div>
           <button
             className="flex-1 cursor-pointer py-2 px-8 ml-10 bg-green shadow-[0px_8px_16px_rgba(55,_99,_244,_0.15)] rounded-13xl flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-mediumslateblue hover:bg-deepskyblue hover:box-border hover:border-[1px] hover:border-solid hover:border-royalblue"
-            onClick={onContactButtonClick}
+            onClick={onContactUsTextClick}
           >
             <a className="relative text-base-8 leading-[25.6px] font-bold font-small-text text-white text-center">
               Contact Us Today

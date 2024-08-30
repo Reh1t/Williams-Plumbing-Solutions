@@ -50,11 +50,17 @@ const Footer1: NextPage<Footer1Type> = ({
   }, [router]);
 
   const onWaterTextClick = useCallback(() => {
-    router.push("/water-treatment");
+    router.push(
+      "https://williams-plumbing-solutions.vercel.app/water-treatment"
+    );
   }, [router]);
 
   const onAboutUsTextClick = useCallback(() => {
     router.push("/about-us");
+  }, [router]);
+
+  const onBlogTextClick = useCallback(() => {
+    router.push("https://blog-delta-three-74.vercel.app/");
   }, [router]);
 
   const onContactUsTextClick = useCallback(() => {
@@ -163,12 +169,6 @@ const Footer1: NextPage<Footer1Type> = ({
         </div>
         <div className="flex flex-col items-start justify-start gap-[14px] min-w-[122px]">
           <div
-            className="flex flex-row items-center justify-center cursor-pointer"
-            onClick={onHomeClick}
-          >
-            Home
-          </div>
-          <div
             className="self-stretch relative leading-[150%] font-medium cursor-pointer"
             onClick={onAboutUsTextClick}
           >
@@ -191,6 +191,12 @@ const Footer1: NextPage<Footer1Type> = ({
             onClick={onContactUsTextClick}
           >
             Contact Us
+          </div>
+          <div
+            className="self-stretch relative leading-[150%] font-medium cursor-pointer"
+            onClick={onBlogTextClick}
+          >
+            Blog
           </div>
         </div>
       </div>

@@ -13,17 +13,13 @@ import Footer1 from "../components/footer1";
 const MoreUVWaterPurification: NextPage = () => {
   return (
     <div className="w-full relative bg-blue-500 flex flex-col items-center justify-center leading-[normal] tracking-[normal]">
-      <Header1 navHEADERAlignSelf="stretch" navHEADERFlex="unset" name1="Water" name2="Treatment" />
-      <div className="self-stretch flex flex-col items-center justify-center py-5 px-0 box-border gap-[48px] max-w-full text-left text-13xl text-black1 font-small-text mq825:gap-[24px]">
-      <div className="mx-auto self-stretch relative max-w-full overflow-hidden max-h-full object-cover">
-        <img
-          className="self-stretch relative max-w-full overflow-hidden max-h-full object-cover"
-          loading="lazy"
-          alt=""
-          src="/waterTreatmentBanner.png"
-        />
-      </div >
-      </div>
+      <Header1
+        navHEADERAlignSelf="stretch"
+        navHEADERFlex="unset"
+        name1="Water"
+        name2="Treatment"
+      />
+
       <PageProduct />
       <UVWaterPurification />
       <PanelImageContent2 />
