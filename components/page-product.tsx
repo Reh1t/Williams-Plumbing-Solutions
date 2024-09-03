@@ -15,7 +15,7 @@ const PageProduct: NextPage<PageProductType> = ({ className = "" }) => {
             className="self-stretch relative max-w-full overflow-hidden max-h-full object-cover"
             loading="lazy"
             alt=""
-            src="/waterTreatmentBanner.png"
+            src="/WaterTreatmentBanner.png"
           />
         </div>
       </div>
