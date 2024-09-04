@@ -9,16 +9,6 @@ const PageProduct: NextPage<PageProductType> = ({ className = "" }) => {
     <section
       className={`self-stretch bg-white flex flex-col items-start justify-start py-4 px-space-1600 box-border gap-[24px] min-w-[240px] max-w-full text-left text-15xl text-text-default-default font-header-1 mq825:pl-8 mq825:pr-8 mq825:box-border ${className}`}
     >
-      <div className="self-stretch flex flex-col items-center justify-center py-5 px-0 box-border gap-[48px] max-w-full text-left text-13xl text-black1 font-small-text mq825:gap-[24px]">
-        <div className="mx-auto self-stretch relative max-w-full overflow-hidden max-h-full object-cover">
-          <img
-            className="self-stretch relative max-w-full overflow-hidden max-h-full object-cover"
-            loading="lazy"
-            alt=""
-            src="/WaterTreatmentBanner.png"
-          />
-        </div>
-      </div>
       <div className="self-stretch flex flex-row items-start justify-start max-w-full mq825:gap-[32px] mq450:gap-[16px]">
         <div className="flex-1 flex flex-col items-start justify-center gap-[24px] max-w-full">
           <div className="self-stretch flex flex-col items-start justify-start">

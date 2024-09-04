@@ -113,15 +113,6 @@ const YourReliablePartner: NextPage<YourReliablePartnerType> = ({
             src="/vector1.svg"
           />
         </div>
-        <div className="w-[1107px] flex flex-row flex-wrap items-center justify-center py-0 px-[149px] box-border gap-[160px] max-w-full mq450:gap-[20px] mq1275:gap-[80px] mq1275:pl-[74px] mq1275:pr-[74px] mq1275:box-border mq750:gap-[40px] mq750:pl-[37px] mq750:pr-[37px] mq750:box-border">
-        <ServiceRequestForm/>
-          <img
-            className="h-[274px] w-[229px] relative rounded-8xl object-cover"
-            loading="lazy"
-            alt=""
-            src="/pexels-photo-by-la-miko@2x.png"
-          />
-        </div>
       </div>
     </section>
   );

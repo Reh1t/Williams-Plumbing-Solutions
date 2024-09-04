@@ -64,7 +64,8 @@ const Footer1: NextPage<Footer1Type> = ({
   }, [router]);
 
   const onContactUsTextClick = useCallback(() => {
-    router.push("https://getjobber.com/");
+    router.push(      "https://clienthub.getjobber.com/client_hubs/c6ab68fa-74c2-4d46-9066-ff2210b88264/public/work_request/new?source=social_media"
+);
   }, [router]);
 
   const onSepticButtonClick = useCallback(() => {
