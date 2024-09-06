@@ -30,35 +30,35 @@ const Header1: NextPage<Header1Type> = ({
   const router = useRouter();
 
   const onSolutionClick = useCallback(() => {
-    router.push("https://williamssolutionpro.vercel.app/");
+    router.push("https://williamssolutions.pro/");
   }, [router]);
 
   const onHomeClick = useCallback(() => {
-    router.push("https://williams-plumbing-solutions.vercel.app/");
+    router.push("/");
   }, [router]);
 
   const onServiesTextClick = useCallback(() => {
-    router.push("https://williams-plumbing-solutions.vercel.app/services");
+    router.push("/services");
   }, [router]);
 
   const onProjectsTextClick = useCallback(() => {
     router.push(
-      "https://williams-plumbing-solutions.vercel.app/project-gallery"
+      "/project-gallery"
     );
   }, [router]);
 
   const onWaterTextClick = useCallback(() => {
     router.push(
-      "https://williams-plumbing-solutions.vercel.app/water-treatment"
+      "/water-treatment"
     );
   }, [router]);
 
   const onAboutUsTextClick = useCallback(() => {
-    router.push("https://williams-plumbing-solutions.vercel.app/about-us");
+    router.push("/about-us");
   }, [router]);
 
   const onContactUsTextClick = useCallback(() => {
-    router.push("https://williams-plumbing-solutions.vercel.app/contact-us1");
+    router.push("/contact-us1");
   }, [router]);
 
   const onBlogTextClick = useCallback(() => {
